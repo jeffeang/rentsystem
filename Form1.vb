@@ -19,6 +19,7 @@ Public Class LoginForm
                     End If
                 End If
             End Using
+            Dim commande As New SqlCommand("select * from admin_user where user_name =@username and password=@pwd ", con)
         End Using
 
 
