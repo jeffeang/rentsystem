@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>rentsystem</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>rentsystem.LoginForm</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 

@@ -28,6 +28,8 @@ Partial Class LoginForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.LoginBt = New System.Windows.Forms.Button()
+        Me.ErrorLab = New System.Windows.Forms.Label()
+        Me.LoginMessage = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -51,10 +53,11 @@ Partial Class LoginForm
         'PwdInput
         '
         Me.PwdInput.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.PwdInput.Location = New System.Drawing.Point(336, 218)
+        Me.PwdInput.Location = New System.Drawing.Point(336, 224)
         Me.PwdInput.Name = "PwdInput"
         Me.PwdInput.Size = New System.Drawing.Size(197, 31)
         Me.PwdInput.TabIndex = 2
+        Me.PwdInput.UseSystemPasswordChar = True
         '
         'Label2
         '
@@ -70,7 +73,7 @@ Partial Class LoginForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(170, 221)
+        Me.Label3.Location = New System.Drawing.Point(160, 224)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(130, 25)
         Me.Label3.TabIndex = 4
@@ -87,11 +90,34 @@ Partial Class LoginForm
         Me.LoginBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.LoginBt.UseVisualStyleBackColor = True
         '
+        'ErrorLab
+        '
+        Me.ErrorLab.AutoSize = True
+        Me.ErrorLab.ForeColor = System.Drawing.Color.Crimson
+        Me.ErrorLab.Location = New System.Drawing.Point(523, 298)
+        Me.ErrorLab.Name = "ErrorLab"
+        Me.ErrorLab.Size = New System.Drawing.Size(0, 20)
+        Me.ErrorLab.TabIndex = 6
+        '
+        'LoginMessage
+        '
+        Me.LoginMessage.AutoSize = True
+        Me.LoginMessage.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.LoginMessage.ForeColor = System.Drawing.Color.Crimson
+        Me.LoginMessage.Location = New System.Drawing.Point(160, 362)
+        Me.LoginMessage.Name = "LoginMessage"
+        Me.LoginMessage.Size = New System.Drawing.Size(67, 25)
+        Me.LoginMessage.TabIndex = 7
+        Me.LoginMessage.Text = "Label4"
+        Me.LoginMessage.Visible = False
+        '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.LoginMessage)
+        Me.Controls.Add(Me.ErrorLab)
         Me.Controls.Add(Me.LoginBt)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -111,4 +137,6 @@ Partial Class LoginForm
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents LoginBt As Button
+    Friend WithEvents ErrorLab As Label
+    Friend WithEvents LoginMessage As Label
 End Class
