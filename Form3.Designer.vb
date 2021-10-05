@@ -22,7 +22,6 @@ Partial Class ReparationForm
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.LastName = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.FirstName = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -35,15 +34,8 @@ Partial Class ReparationForm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.StudentSearchBt = New System.Windows.Forms.Button()
+        Me.LastName = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
-        '
-        'LastName
-        '
-        Me.LastName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LastName.Location = New System.Drawing.Point(130, 38)
-        Me.LastName.Name = "LastName"
-        Me.LastName.Size = New System.Drawing.Size(150, 34)
-        Me.LastName.TabIndex = 0
         '
         'TextBox8
         '
@@ -154,11 +146,20 @@ Partial Class ReparationForm
         Me.StudentSearchBt.Text = "Chercher Élève"
         Me.StudentSearchBt.UseVisualStyleBackColor = True
         '
+        'LastName
+        '
+        Me.LastName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LastName.Location = New System.Drawing.Point(130, 38)
+        Me.LastName.Name = "LastName"
+        Me.LastName.Size = New System.Drawing.Size(150, 34)
+        Me.LastName.TabIndex = 19
+        '
         'ReparationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1076, 516)
+        Me.Controls.Add(Me.LastName)
         Me.Controls.Add(Me.StudentSearchBt)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -171,15 +172,12 @@ Partial Class ReparationForm
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.FirstName)
         Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.LastName)
         Me.Name = "ReparationForm"
         Me.Text = "Réparation Page"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents LastName As TextBox
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents FirstName As TextBox
     Friend WithEvents TextBox3 As TextBox
@@ -192,4 +190,5 @@ Partial Class ReparationForm
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents StudentSearchBt As Button
+    Friend WithEvents LastName As TextBox
 End Class

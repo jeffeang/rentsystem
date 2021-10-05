@@ -28,6 +28,9 @@ Public Class StudentList
         Reparform.StudentFirstName = DataGridView1.CurrentRow.Cells(1).Value.ToString()
         Reparform.StudentLastName = DataGridView1.CurrentRow.Cells(2).Value.ToString()
         Reparform.StudentGroupe = DataGridView1.CurrentRow.Cells(3).Value.ToString()
+        message.Text = Reparform.StudentLastName
+        Reparform.Show()
+
 
 
 
@@ -37,20 +40,37 @@ Public Class StudentList
         Me.SearchFilter()
     End Sub
 
+    Private Sub FirstNameInpt_TextChanged(sender As Object, e As EventArgs) Handles FirstNameInpt.TextChanged
+        Me.SearchFilter()
+    End Sub
+
+    Private Sub GroupInpt_TextChanged(sender As Object, e As EventArgs) Handles GroupInpt.TextChanged
+        Me.SearchFilter()
+    End Sub
 
     Private Function SearchFilter()
         Dim SearchLastName = LastNameInpt.Text
         Dim SearchFirstName = FirstNameInpt.Text
         Dim SearchGroup = GroupInpt.Text
-        Dim SqlString = "ELECT [ID],[first_name] ,[last_name],[group] FROM [Students]"
+        Dim SqlString = "SELECT [ID],[first_name] ,[last_name],[group] FROM [Students]"
         If SearchLastName IsNot "" Then
             SqlString = SqlString & "where [first_name] like '" & SearchLastName & "%'"
+            If SearchFirstName IsNot "" Then
+                SqlString = SqlString & " AND [last_name] like '" & SearchFirstName & "%'"
+            End If
+            If SearchGroup IsNot "" Then
+                SqlString = SqlString & " AND [group] like '" & SearchGroup & "%'"
+            End If
 
-
+        ElseIf SearchFirstName IsNot "" Then
+            SqlString = SqlString & "where [last_name] like '" & SearchFirstName & "%'"
+            If SearchGroup IsNot "" Then
+                SqlString = SqlString & " AND [group] like '" & SearchGroup & "%'"
+            End If
+        ElseIf SearchGroup IsNot "" Then
+            SqlString = SqlString & "where [group] like '" & SearchGroup & "%'"
         End If
-
-
-
+        message.Text = SqlString
         Using con As SqlConnection = New SqlConnection("Data Source=DELL-XIAOMING\SQLEXPRESS;Initial Catalog=rentsystem;Integrated Security=True")
             Using cmd As New SqlCommand(SqlString)
                 Using sda As New SqlDataAdapter()
@@ -66,4 +86,6 @@ Public Class StudentList
             con.Close()
         End Using
     End Function
+
+
 End Class
