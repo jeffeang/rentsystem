@@ -22,10 +22,10 @@ Partial Class ReparationForm
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Desc = New System.Windows.Forms.TextBox()
         Me.FirstName = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Sn = New System.Windows.Forms.TextBox()
+        Me.InvNo = New System.Windows.Forms.TextBox()
         Me.Groupe = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -35,45 +35,51 @@ Partial Class ReparationForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.StudentSearchBt = New System.Windows.Forms.Button()
         Me.LastName = New System.Windows.Forms.TextBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.RentInvNo = New System.Windows.Forms.TextBox()
+        Me.rentBT = New System.Windows.Forms.Button()
+        Me.SaveBt = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox8
+        'Desc
         '
-        Me.TextBox8.Location = New System.Drawing.Point(594, 148)
-        Me.TextBox8.Multiline = True
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(361, 198)
-        Me.TextBox8.TabIndex = 7
+        Me.Desc.Location = New System.Drawing.Point(594, 148)
+        Me.Desc.Multiline = True
+        Me.Desc.Name = "Desc"
+        Me.Desc.Size = New System.Drawing.Size(361, 198)
+        Me.Desc.TabIndex = 7
         '
         'FirstName
         '
         Me.FirstName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.FirstName.Location = New System.Drawing.Point(130, 93)
         Me.FirstName.Name = "FirstName"
+        Me.FirstName.ReadOnly = True
         Me.FirstName.Size = New System.Drawing.Size(150, 34)
         Me.FirstName.TabIndex = 8
         '
-        'TextBox3
+        'Sn
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox3.Location = New System.Drawing.Point(594, 38)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(150, 34)
-        Me.TextBox3.TabIndex = 9
+        Me.Sn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Sn.Location = New System.Drawing.Point(594, 38)
+        Me.Sn.Name = "Sn"
+        Me.Sn.Size = New System.Drawing.Size(150, 34)
+        Me.Sn.TabIndex = 9
         '
-        'TextBox4
+        'InvNo
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox4.Location = New System.Drawing.Point(594, 83)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(150, 34)
-        Me.TextBox4.TabIndex = 10
+        Me.InvNo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.InvNo.Location = New System.Drawing.Point(594, 83)
+        Me.InvNo.Name = "InvNo"
+        Me.InvNo.Size = New System.Drawing.Size(150, 34)
+        Me.InvNo.TabIndex = 10
         '
         'Groupe
         '
         Me.Groupe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Groupe.Location = New System.Drawing.Point(130, 165)
         Me.Groupe.Name = "Groupe"
+        Me.Groupe.ReadOnly = True
         Me.Groupe.Size = New System.Drawing.Size(150, 34)
         Me.Groupe.TabIndex = 11
         '
@@ -151,14 +157,56 @@ Partial Class ReparationForm
         Me.LastName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.LastName.Location = New System.Drawing.Point(130, 38)
         Me.LastName.Name = "LastName"
+        Me.LastName.ReadOnly = True
         Me.LastName.Size = New System.Drawing.Size(150, 34)
         Me.LastName.TabIndex = 19
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(26, 322)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(196, 24)
+        Me.CheckBox1.TabIndex = 20
+        Me.CheckBox1.Text = "prêter un C hromeBook ?"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'RentInvNo
+        '
+        Me.RentInvNo.Location = New System.Drawing.Point(26, 369)
+        Me.RentInvNo.Name = "RentInvNo"
+        Me.RentInvNo.ReadOnly = True
+        Me.RentInvNo.Size = New System.Drawing.Size(125, 27)
+        Me.RentInvNo.TabIndex = 21
+        '
+        'rentBT
+        '
+        Me.rentBT.Location = New System.Drawing.Point(185, 369)
+        Me.rentBT.Name = "rentBT"
+        Me.rentBT.Size = New System.Drawing.Size(138, 29)
+        Me.rentBT.TabIndex = 22
+        Me.rentBT.Text = "voir le détail "
+        Me.rentBT.UseMnemonic = False
+        Me.rentBT.UseVisualStyleBackColor = True
+        '
+        'SaveBt
+        '
+        Me.SaveBt.Location = New System.Drawing.Point(428, 436)
+        Me.SaveBt.Name = "SaveBt"
+        Me.SaveBt.Size = New System.Drawing.Size(220, 41)
+        Me.SaveBt.TabIndex = 23
+        Me.SaveBt.Text = "Sauvegarder"
+        Me.SaveBt.UseVisualStyleBackColor = True
         '
         'ReparationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1076, 516)
+        Me.Controls.Add(Me.SaveBt)
+        Me.Controls.Add(Me.rentBT)
+        Me.Controls.Add(Me.RentInvNo)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.LastName)
         Me.Controls.Add(Me.StudentSearchBt)
         Me.Controls.Add(Me.Label6)
@@ -168,20 +216,20 @@ Partial Class ReparationForm
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Groupe)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.InvNo)
+        Me.Controls.Add(Me.Sn)
         Me.Controls.Add(Me.FirstName)
-        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.Desc)
         Me.Name = "ReparationForm"
         Me.Text = "Réparation Page"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Desc As TextBox
     Friend WithEvents FirstName As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Sn As TextBox
+    Friend WithEvents InvNo As TextBox
     Friend WithEvents Groupe As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -191,4 +239,8 @@ Partial Class ReparationForm
     Friend WithEvents Label6 As Label
     Friend WithEvents StudentSearchBt As Button
     Friend WithEvents LastName As TextBox
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents RentInvNo As TextBox
+    Friend WithEvents rentBT As Button
+    Friend WithEvents SaveBt As Button
 End Class
