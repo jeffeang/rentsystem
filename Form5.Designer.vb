@@ -23,51 +23,138 @@ Partial Class Rapport
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Nom = New System.Windows.Forms.TextBox()
+        Me.Prenom = New System.Windows.Forms.TextBox()
+        Me.Sn = New System.Windows.Forms.TextBox()
+        Me.InvNo = New System.Windows.Forms.TextBox()
+        Me.Rechercher = New System.Windows.Forms.Button()
+        Me.detail = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ReportTitle = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 140)
+        Me.DataGridView1.Location = New System.Drawing.Point(48, 181)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 29
-        Me.DataGridView1.Size = New System.Drawing.Size(767, 277)
+        Me.DataGridView1.Size = New System.Drawing.Size(834, 329)
         Me.DataGridView1.TabIndex = 0
         '
-        'TextBox1
+        'Nom
         '
-        Me.TextBox1.Location = New System.Drawing.Point(98, 27)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox1.TabIndex = 1
+        Me.Nom.Location = New System.Drawing.Point(48, 42)
+        Me.Nom.Name = "Nom"
+        Me.Nom.Size = New System.Drawing.Size(125, 27)
+        Me.Nom.TabIndex = 1
         '
-        'TextBox2
+        'Prenom
         '
-        Me.TextBox2.Location = New System.Drawing.Point(278, 27)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox2.TabIndex = 2
+        Me.Prenom.Location = New System.Drawing.Point(222, 42)
+        Me.Prenom.Name = "Prenom"
+        Me.Prenom.Size = New System.Drawing.Size(125, 27)
+        Me.Prenom.TabIndex = 2
         '
-        'TextBox3
+        'Sn
         '
-        Me.TextBox3.Location = New System.Drawing.Point(450, 27)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox3.TabIndex = 3
+        Me.Sn.Location = New System.Drawing.Point(385, 42)
+        Me.Sn.Name = "Sn"
+        Me.Sn.Size = New System.Drawing.Size(125, 27)
+        Me.Sn.TabIndex = 3
+        '
+        'InvNo
+        '
+        Me.InvNo.Location = New System.Drawing.Point(550, 42)
+        Me.InvNo.Name = "InvNo"
+        Me.InvNo.Size = New System.Drawing.Size(125, 27)
+        Me.InvNo.TabIndex = 4
+        '
+        'Rechercher
+        '
+        Me.Rechercher.Location = New System.Drawing.Point(721, 42)
+        Me.Rechercher.Name = "Rechercher"
+        Me.Rechercher.Size = New System.Drawing.Size(94, 29)
+        Me.Rechercher.TabIndex = 5
+        Me.Rechercher.Text = "Recherche"
+        Me.Rechercher.UseVisualStyleBackColor = True
+        '
+        'detail
+        '
+        Me.detail.Location = New System.Drawing.Point(48, 146)
+        Me.detail.Name = "detail"
+        Me.detail.Size = New System.Drawing.Size(94, 29)
+        Me.detail.TabIndex = 6
+        Me.detail.Text = "Détail"
+        Me.detail.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(48, 19)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 20)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "nom"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(222, 19)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(60, 20)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "Prénom"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(385, 19)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(28, 20)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "SN"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(550, 19)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(98, 20)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "Inventaire No"
+        '
+        'ReportTitle
+        '
+        Me.ReportTitle.AutoSize = True
+        Me.ReportTitle.Font = New System.Drawing.Font("Stencil", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ReportTitle.Location = New System.Drawing.Point(385, 102)
+        Me.ReportTitle.Name = "ReportTitle"
+        Me.ReportTitle.Size = New System.Drawing.Size(107, 27)
+        Me.ReportTitle.TabIndex = 11
+        Me.ReportTitle.Text = "Report"
         '
         'Rapport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(826, 468)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.ClientSize = New System.Drawing.Size(1014, 542)
+        Me.Controls.Add(Me.ReportTitle)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.detail)
+        Me.Controls.Add(Me.Rechercher)
+        Me.Controls.Add(Me.InvNo)
+        Me.Controls.Add(Me.Sn)
+        Me.Controls.Add(Me.Prenom)
+        Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Rapport"
         Me.Text = "Rapport"
@@ -78,7 +165,15 @@ Partial Class Rapport
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Nom As TextBox
+    Friend WithEvents Prenom As TextBox
+    Friend WithEvents Sn As TextBox
+    Friend WithEvents InvNo As TextBox
+    Friend WithEvents Rechercher As Button
+    Friend WithEvents detail As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents ReportTitle As Label
 End Class
