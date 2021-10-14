@@ -44,7 +44,7 @@ Partial Class Rapport
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 29
-        Me.DataGridView1.Size = New System.Drawing.Size(834, 329)
+        Me.DataGridView1.Size = New System.Drawing.Size(1004, 329)
         Me.DataGridView1.TabIndex = 0
         '
         'Nom
@@ -143,7 +143,7 @@ Partial Class Rapport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1014, 542)
+        Me.ClientSize = New System.Drawing.Size(1093, 542)
         Me.Controls.Add(Me.ReportTitle)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
