@@ -4,7 +4,8 @@ Imports rentsystem.ReparationForm
 Public Class StudentList
 
     Private Sub StudentList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Using con As SqlConnection = New SqlConnection("Data Source=DELL-XIAOMING\SQLEXPRESS;Initial Catalog=rentsystem;Integrated Security=True")
+        Dim connDBObject = New ConDB()
+        Using con = connDBObject.connectDB()
             Using cmd As New SqlCommand("SELECT [ID],[first_name] ,[last_name],[group] FROM [Students]")
                 Using sda As New SqlDataAdapter()
                     cmd.Connection = con
@@ -71,7 +72,8 @@ Public Class StudentList
             SqlString = SqlString & "where [group] like '" & SearchGroup & "%'"
         End If
         message.Text = SqlString
-        Using con As SqlConnection = New SqlConnection("Data Source=DELL-XIAOMING\SQLEXPRESS;Initial Catalog=rentsystem;Integrated Security=True")
+        Dim connDBObject = New ConDB()
+        Using con = connDBObject.connectDB()
             Using cmd As New SqlCommand(SqlString)
                 Using sda As New SqlDataAdapter()
                     cmd.Connection = con

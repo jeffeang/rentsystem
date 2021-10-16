@@ -1,6 +1,7 @@
 ﻿Imports rentsystem.MenuPage
 Imports rentsystem.StudentList
 Imports System.Data.SqlClient
+Imports rentsystem.ConDB
 
 Public Class ReparationForm
     Public StudentID
@@ -42,8 +43,8 @@ Public Class ReparationForm
            ,@status_repair 
            ,@sn
            ,@inv_no)"
-
-        Using con As SqlConnection = New SqlConnection("Data Source=DELL-XIAOMING\SQLEXPRESS;Initial Catalog=rentsystem;Integrated Security=True")
+        Dim connDBObject = New ConDB()
+        Using con = connDBObject.connectDB()
             Using comm As New SqlCommand()
                 With comm
                     .Connection = con

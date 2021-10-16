@@ -1,4 +1,5 @@
 ﻿Imports System
+Imports rentsystem.ConDB
 Imports System.Data.SqlClient
 Imports rentsystem.MenuPage
 
@@ -8,8 +9,8 @@ Public Class LoginForm
         Dim User = UserInput.Text
         Dim Paswd = PwdInput.Text
         LoginMessage.Visible = False
-
-        Using con As SqlConnection = New SqlConnection("Data Source=DELL-XIAOMING\SQLEXPRESS;Initial Catalog=rentsystem;Integrated Security=True")
+        Dim connDBObject = New ConDB()
+        Using con = connDBObject.connectDB()
             con.Open()
             Dim commande As New SqlCommand("select count(*) as rows from admin_user where user_name =@username and password=@pwd ", con)
             commande.Parameters.AddWithValue("@username", User)
